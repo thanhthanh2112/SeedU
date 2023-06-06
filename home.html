@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=>, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <title>SEEDU</title>
 </head>
+
 <body>
 <div class="wrap">
     <header></header>
@@ -19,7 +24,7 @@
                 <li>Blog</li>
                 <li>Services</li>   
                 <li>Activities</li>
-                <li>Become stakeholders</li>
+                <li><a href="#option">Become stakeholders</a></li>
                 <li>Contact</li>
                 <li><button class="login">Login</button></li>
                 <li><button class="start">Get started</button></li>
@@ -49,9 +54,9 @@
         <div class="range">
             <div class="box">
                 <div class="top">
-                    <div class="pic">
+                    <!-- <div class="pic"> -->
                     <img class="ava1" src="img/ava1.png" alt="ava1">
-                    </div>
+                    <!-- </div> -->
                     <div class="details">
                     <p class="name">Name</p>
                     <p class="job">job</p>
@@ -115,34 +120,35 @@
             <div class="right">
                 <h2>SeedU</h2>
                 <div class="rigcon">
-                    <ul>
-                        <li>
-                            <span class="number">1</span>
-                            <span class="content">Create an account online anywhere, anytime<br>
-                            Connect with matching field experts<br>
-                            Book a session</span>
-                        <li>
-                            <span class="number">2</span>
-                            <span class="content">Attend a session online anywhere, anytime<br>
-                                Assess and comment on the experts and the session right after the end<br>
-                                Get expert advice on suggested customer journey before creating the experience on their own.</span>
-                        </li>
-                        <li>
-                            <span class="number">3</span>
-                            <span class="content">Follow the individualized customer journeys<br>
+                    <div>
+                            <p class="number">1</p>
+                            <p class="content">
+                            Create an account online anywhere, anytime</p>
+                            <p class="content">Connect with matching field experts</p>
+                            <p class="content">Book a session</p>
+                    </div>
+                    <div>
+                            <p class="number">2</p>
+                            <p class="content">Attend a session online anywhere, anytime</p>
+                            <p class="content">Assess and comment on the experts and the session right after the end</p>
+                    </div>
+                    <div>
+                            <p class="number">3</p>
+                            <p class="content">Follow the individualized customer journeys<br>
                                 Social workers will accompany the entire way (if needed)<br>                          
-                                Checked for improving progress by social workers</span>
-                        </li>
-                    </ul>
+                                Checked for improving progress by social workers</p>
+                    </div>
                 </div>
             </div>
     </section>
+
     <section class="fifth">
-        <div class="motto">WITH THE MOTTO</div>
-        <div class="centric">
+        <p class="motto">WITH THE MOTTO</p>
+        <div class="clientcentric">
             <span class="client">CLIENT </span>
-            <span class="CENTRIC">CENTRIC</span>
-        <p>“SEEDU is committed to providing a safe garden so that clients can rest assured to replant the seeds of the soul that have experienced many traumas.”</p>
+            <span class="sub">CENTRIC</span>
+        </div>
+        <p class="noidung">“SEEDU is committed to providing a safe garden so that clients can rest assured to replant the seeds of the soul that have experienced many traumas.”</p>
     </section>
        
 
@@ -150,6 +156,52 @@
         For a warm, sunny day, let's bravely await
         When flowers bloom, in vibrant array,
         With friends by our side, we'll joyfully sway... </section>
+    
+    <section id="option">
+            <form>
+              <h1>Become stakeholders</h1>
+              <div class="grid-2-col fixed-height">
+                <div class="input-group">
+                  <label for="name" >Name</label>
+                  <input type="text" id="name" name="name" >
+                </div>
+          
+                <div class="input-group">
+                  <label for="role" >You will be a...</label>
+                  <select  id="role" name="role" class="decorated">
+                    <option value="">Select your role</option>
+                    <option value="investor">investor</option>
+                    <option value="sponsor">sponsor</option>
+                    <option value="partner">partner</option>
+                  </select>
+                </div>
+              </div>
+          
+              <div class="grid-2-col">
+                <div class="input-group">
+                  <label for="organization" >Organization</label>
+                  <input type="text" name="organization" id="organization" >
+                </div>
+              </div>
+          
+              <div class="grid-2-col">
+                <div class="input-group">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email" />
+                </div>
+          
+                <div class="input-group">
+                  <label for="phone">Phone</label>
+                  <input type="text" name="phone" id="phone">
+                </div>
+              </div>
+          
+              <div style="text-align: center; margin-top: 40px;">
+                <button type="submit" >Submit</button>
+              </div>
+          
+            </form>
+        </section>
 
     <footer>
     <div class="footer-row">
