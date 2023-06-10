@@ -10,41 +10,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <title>SEEDU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">   
+<title>SEEDU</title>
+<script>  function goToOptionPage() {
+    window.location.href = "option.html";} </script>
+<script>
+    function goBack() {
+      window.history.back();}
+</script>
+
 </head>
 
 <body>
 <div class="wrap">
-    <header></header>
+    <!-- <header></header> -->
     <section class="banner">
-        <div class="menu">
-            <img class="logo" src="img/logo.png" alt="logo">
-            <ul class="navbar">
-                <li>About</li>
-                <li>Blog</li>
-                <li>Services</li>   
-                <li>Activities</li>
-                <li><a href="#option">Become stakeholders</a></li>
-                <li>Contact</li>
-                <li><button class="login">Login</button></li>
-                <li><button class="start">Get started</button></li>
-            </ul>
-        </div>
+        <nav id="menu">
+            <!-- <img class="logo" src="img/logo.png" alt="logo"> -->
+            <img class="logo" src="img/logo.png" alt="logo" onclick="goBack()">
+            <div class="navbar">
+                <div class="navbarcolumn">
+                    <div id="menusymbol">
+                            <img src="img/menusymbol.png" alt="menusymbol">
+                    </div>
+                <!-- <a href="#" class="menu-icon" onclick="toggleMenu()">&#9776;</a> -->
+                    <div class="navbar-links-container"> 
+                        <div class="navbar-links hidden"id="navbar">
+                        <a>About</a>
+                        <a>Blog</a>
+                        <a>Services</a>   
+                        <a>Activities</a>
+                        <!-- <a href="#option">Become stakeholders</a> -->
+                        <a onclick="goToOptionPage()">Become stakeholders</a>
+                        <a>Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="login">Login</button>
+                <button class="start">Get started</button>
+            </div>     
+        </nav>
         <h1>TOGETHER</h1>
         <p class="subtitle">we mend the broken soul</p>
         <img class="humanheart" src="img/human heart.png" alt="human heart">
         <img class="frame3" src="img/frame3.gif" alt="frame3">
     </section>
     
-
+<div>
     <section class="second">
+        <img class="ngctren" src="img/quotegreen.png" alt="quote">
+        <img class="ngcduoi" src="img/quotebrown.png" alt="quote">
         <h2>SeedU</h2>
         <p>is an online platform connects clients with experienced counselors and 
             life coaches that support to raise Vietnamese people living standard mentally & physically.
             Based on each client's individual situation to design custom healing journeys after each session, 
             SEEDU promises to bring enjoyable and comfortable experiences to heal broken souls.
-            </p>
+        </p>
     </section>
+</div>
 
     <section class="third">
         <h2>Client Testimonials</h2>
@@ -54,9 +79,9 @@
         <div class="range">
             <div class="box">
                 <div class="top">
-                    <!-- <div class="pic"> -->
+                    <div class="pic">
                     <img class="ava1" src="img/ava1.png" alt="ava1">
-                    <!-- </div> -->
+                    </div>
                     <div class="details">
                     <p class="name">Name</p>
                     <p class="job">job</p>
@@ -116,7 +141,7 @@
     </section>
 
     <section class="fourth"> 
-            <div class="left">JOURNEY STEPS</div>
+            <div class="left"><h7>JOURNEY STEPS</h7></div>
             <div class="right">
                 <h2>SeedU</h2>
                 <div class="rigcon">
@@ -157,7 +182,7 @@
         When flowers bloom, in vibrant array,
         With friends by our side, we'll joyfully sway... </section>
     
-    <section id="option">
+    <!-- <section id="option">
             <form>
               <h1>Become stakeholders</h1>
               <div class="grid-2-col fixed-height">
@@ -196,12 +221,12 @@
                 </div>
               </div>
           
-              <div style="text-align: center; margin-top: 40px;">
+              <div style="text-align: center; margin-top: 35px; margin-bottom:30px;">
                 <button type="submit" >Submit</button>
               </div>
           
             </form>
-        </section>
+        </section> -->
 
     <footer>
     <div class="footer-row">
@@ -220,7 +245,7 @@
             <img class="ins" src="img/ins.png" alt="ins">
             <img class="tw" src="img/twitter.png" alt="twitter">
         </div>
-    </div>
+        </div>
         <div class="fill">
             <p>SIGN UP TO RECEIVE SEEDU'S EARLIEST UPDATE!</p>
             <div class="email-input">
@@ -228,8 +253,25 @@
                 <button>Subscribe</button>
             </div>
         </div>
-
     </footer>
+
+<script>
+const menusymbol = document.getElementById('menusymbol');
+const navbar = document.getElementById('navbar');
+console.log(navbar)
+menusymbol.addEventListener('click', function() {
+    if(navbar.classList.contains("hidden"))
+    {navbar.classList.remove("hidden")}
+    else {navbar.classList.add("hidden")}
+//   navbar.classList.toggle('is-visible');
+});
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 768) {
+    navbar.classList.remove('is-visible');
+  }
+});
+</script>
 </body>
 </div>
 </html>

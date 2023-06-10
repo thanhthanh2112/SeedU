@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">   
+    <title>SEEDU</title>
+    <script>  function goToOptionPage() {
+        window.location.href = "option.html";} </script>
+    <script>
+        function goBack() {
+          window.history.back();}
+    </script>
+</head>
+<body>
+    <section class="banner">
+        <nav id="menu">
+            <!-- <img class="logo" src="img/logo.png" alt="logo"> -->
+            <img class="logo" src="img/logo.png" alt="logo" onclick="goBack()">
+            <div class="navbar">
+                <a>About</a>
+                <a>Blog</a>
+                <a>Services</a>   
+                <a>Activities</a>
+                <!-- <a href="#option">Become stakeholders</a> -->
+                <a onclick="goToOptionPage()">Become stakeholders</a>
+                <a>Contact</a>
+                <button class="login">Login</button>
+                <button class="start">Get started</button>
+            </div>
+        </nav>
+    </section>
+
+    <section id="option">
+        <form>
+          <h1>Become stakeholders</h1>
+          <div class="grid-2-col fixed-height">
+            <div class="input-group">
+              <label for="name" >Name</label>
+              <input type="text" id="name" name="name" >
+            </div>
+      
+            <div class="input-group">
+              <label for="role" >You will be a...</label>
+              <select  id="role" name="role" class="decorated">
+                <option value="">Select your role</option>
+                <option value="investor">investor</option>
+                <option value="sponsor">sponsor</option>
+                <option value="partner">partner</option>
+              </select>
+            </div>
+          </div>
+      
+          <div class="grid-2-col">
+            <div class="input-group">
+              <label for="organization" >Organization</label>
+              <input type="text" name="organization" id="organization" >
+            </div>
+          </div>
+      
+          <div class="grid-2-col">
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" />
+            </div>
+      
+            <div class="input-group">
+              <label for="phone">Phone</label>
+              <input type="text" name="phone" id="phone">
+            </div>
+          </div>
+      
+          <div style="text-align: center; margin-top: 35px; margin-bottom:30px;">
+            <button type="submit" >Submit</button>
+          </div>
+      
+        </form>
+    </section>
+</body>
+</html>
